@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Husky Helper</string>
+
+    <string name="greetingHeader">Welcome!</string>
+    <string name="academicLabel">Academics</string>
+    <string name="studyLabel">Studying</string>
+    <string name="foodLabel">Food Resources</string>
+    <string name="parkingLabel">Parking</string>
+    <string name="tacomaLabel">Tacoma Life</string>
+    <string name="clubLabel">Clubs &amp; RSOs</string>
 </resources>

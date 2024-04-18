@@ -8,10 +8,10 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/homeGreeting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome!"
+        android:text="@string/greetingHeader"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -35,10 +35,10 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/academicBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Academics"
+        android:text="@string/academicLabel"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,10 +48,10 @@
         app:layout_constraintVertical_bias="0.308" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/studyBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Studying"
+        android:text="@string/studyLabel"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,10 +60,10 @@
         app:layout_constraintVertical_bias="0.524" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/foodBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Food Resources"
+        android:text="@string/foodLabel"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,10 +72,10 @@
         app:layout_constraintVertical_bias="0.729" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/parkingBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Parking"
+        android:text="@string/parkingLabel"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -84,10 +84,10 @@
         app:layout_constraintVertical_bias="0.631" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/tacomaBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tacoma Life"
+        android:text="@string/tacomaLabel"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,10 +97,10 @@
         app:layout_constraintVertical_bias="0.833" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/clubBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Clubs and RSOs"
+        android:text="@string/clubLabel"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
