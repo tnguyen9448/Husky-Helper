@@ -7,7 +7,7 @@
 
     <activity
         android:id="@+id/studyRoom"
-        android:name="main.huskyhelper.studyRoom"
+        android:name="main.huskyhelper.StudyRoomActivity"
         android:label="activity_study_room"
         tools:layout="@layout/activity_study_room" />
     <fragment

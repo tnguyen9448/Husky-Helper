@@ -1,6 +1,5 @@
 package main.huskyhelper;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +13,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-public class studyRoom extends AppCompatActivity {
+public class StudyRoomActivity extends AppCompatActivity {
     private FragmentManager fragmentManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +31,7 @@ public class studyRoom extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick( View view ){
-                Fragment fragment = new cpStudy();
+                Fragment fragment = new CpStudyFragment();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
                 transaction.replace(R.id.main, fragment);
                 transaction.commit();
@@ -46,7 +45,7 @@ public class studyRoom extends AppCompatActivity {
         Doubbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick( View view ){
-                Fragment fragment = new douStudy();
+                Fragment fragment = new DouStudyFragment();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
                 transaction.replace(R.id.main, fragment);
                 transaction.commit();
@@ -58,7 +57,7 @@ public class studyRoom extends AppCompatActivity {
         JoyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick( View view ){
-                Fragment fragment = new joyStudy();
+                Fragment fragment = new JoyStudyFragment();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
                 transaction.replace(R.id.main, fragment);
                 transaction.commit();
@@ -70,7 +69,7 @@ public class studyRoom extends AppCompatActivity {
         BHSBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick( View view ){
-                Fragment fragment = new bhsStudy();
+                Fragment fragment = new BhsStudyFragment();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
                 transaction.replace(R.id.main, fragment);
                 transaction.commit();
@@ -82,7 +81,7 @@ public class studyRoom extends AppCompatActivity {
         btnMLG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick( View view ){
-                Fragment fragment = new mlgStudy();
+                Fragment fragment = new MlgStudyFragment();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
                 transaction.replace(R.id.main, fragment);
                 transaction.commit();
