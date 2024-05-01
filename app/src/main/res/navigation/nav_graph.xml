@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/studyRoom">
+
+    <activity
+        android:id="@+id/studyRoom"
+        android:name="main.huskyhelper.studyRoom"
+        android:label="activity_study_room"
+        tools:layout="@layout/activity_study_room" />
+    <fragment
+        android:id="@+id/cPFragment"
+        android:name="main.huskyhelper.cPFragment"
+        android:label="fragment_c_p"
+        tools:layout="@layout/fragment_c_p" />
+</navigation>
