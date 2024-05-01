@@ -1,13 +1,10 @@
 <resources>
     <string name="app_name">Husky Helper</string>
+    <string name="img_name">Husky Helper Icon</string>
 
     <string name="greetingHeader">Welcome!</string>
     <string name="academicLabel">Academics</string>
     <string name="studyLabel">Studying</string>
-    <string name="foodLabel">Food Resources</string>
-    <string name="parkingLabel">Parking</string>
-    <string name="tacomaLabel">Tacoma Life</string>
+    <string name="abtLabel">About Us</string>
     <string name="clubLabel">Clubs &amp; RSOs</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

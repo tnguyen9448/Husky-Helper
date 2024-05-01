@@ -13,22 +13,6 @@
         android:theme="@style/Theme.HuskyHelper"
         tools:targetApi="31">
         <activity
-            android:name=".MLGStudyRoom"
-            android:exported="false" />
-        <activity
-            android:name=".BHSStudyRoom"
-            android:exported="false" />
-        <activity
-            android:name=".JoyStudyRoom"
-            android:exported="false" />
-        <activity
-            android:name=".DOUStudyRoom"
-            android:exported="false" />
-        <activity
-            android:name=".CPStudyRoom"
-            android:exported="false" />
-        <activity
-            android:name=".studyRoom"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
