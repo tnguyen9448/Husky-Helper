@@ -10,14 +10,14 @@ import android.view.ViewGroup;
 
 /**
  * A simple {@link Fragment} subclass.
- */
-public class cpStudy extends Fragment {
 
+ */
+public class BhsStudyFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cp_study, container, false);
+        return inflater.inflate(R.layout.fragment_bhs_study, container, false);
     }
 }
