@@ -7,4 +7,24 @@
     <string name="studyLabel">Studying</string>
     <string name="abtLabel">About Us</string>
     <string name="clubLabel">Clubs &amp; RSOs</string>
+
+
+    <string name="husciiDevClub">HuSCII Developer Club</string>
+    <string name="engineerClub">Engineers Without Borders</string>
+    <string name="gameDevClub">Game Development Club</string>
+    <string name="huskyClubInfo">
+        Dive into the exciting world of coding and unlock your potential at our Husky Coding Club!
+    </string>
+    <string name="engineerClubInfo">
+
+       Explore the fascinating realm of engineering and innovate with us at our club!
+    </string>
+    <string name="gameDevClubInfo">
+        Embark on an epic journey of creativity and coding at our Game Development Club!
+    </string>
+    <string name="joinEngineer">Join</string>
+    <string name="joinGame">Join</string>
+    <string name="joinDev">Join</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
