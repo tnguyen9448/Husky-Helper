@@ -37,5 +37,10 @@ public class MainActivity extends AppCompatActivity {
                 transaction.commit();
             }
         });
+
+        findViewById(R.id.abtBtn).setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), AboutActivity.class);
+            startActivity(intent);
+        });
     }
 }
