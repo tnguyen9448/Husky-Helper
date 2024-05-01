@@ -42,5 +42,10 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), AboutActivity.class);
             startActivity(intent);
         });
+
+        findViewById(R.id.studyBtn).setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), StudyRoomActivity.class);
+            startActivity(intent);
+        });
     }
 }
