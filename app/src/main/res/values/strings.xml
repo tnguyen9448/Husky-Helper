@@ -7,6 +7,11 @@
     <string name="studyLabel">Studying</string>
     <string name="abtLabel">About Us</string>
     <string name="clubLabel">Clubs &amp; RSOs</string>
+    <string name="about_title">About Husky Helper</string>
+    <string name="abt_txt1">Husky Helper is a mobile app developed in Android Studio for TCSS 450 in Spring quarter 2024.</string>
+    <string name="abt_txt2">This app is intended to provide a collection of resources for UW Tacoma first-year students, with information on academic resources, RSOs and Clubs, studying spaces, and parking locations on campus.</string>
+    <string name="abt_txt3">This app was made by Cecil Susi, Tammy Nguyen, and An Ha.</string>
+    <string name="logo_alt_txt">Logo of App</string>
 
 
 </resources>
