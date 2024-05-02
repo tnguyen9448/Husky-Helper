@@ -13,6 +13,9 @@
         android:theme="@style/Theme.HuskyHelper"
         tools:targetApi="31">
         <activity
+            android:name=".AcademicsActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -21,7 +24,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".AboutActivity"
             android:exported="true">
@@ -31,7 +33,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".StudyRoomActivity"
             android:exported="true">
@@ -41,7 +42,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

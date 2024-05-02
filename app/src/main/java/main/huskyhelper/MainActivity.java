@@ -26,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        findViewById(R.id.academicBtn).setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), AcademicsActivity.class);
+            startActivity(intent);
+        });
 
         findViewById(R.id.clubBtn).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,14 +42,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.studyBtn).setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), StudyRoomActivity.class);
+            startActivity(intent);
+        });
+
         findViewById(R.id.abtBtn).setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), AboutActivity.class);
             startActivity(intent);
         });
 
-        findViewById(R.id.studyBtn).setOnClickListener(v -> {
-            Intent intent = new Intent(getApplicationContext(), StudyRoomActivity.class);
-            startActivity(intent);
-        });
     }
 }
