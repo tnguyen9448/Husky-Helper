@@ -1,5 +1,7 @@
 package main.huskyhelper;
 
+import static android.content.Intent.ACTION_VIEW;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -26,28 +28,22 @@ public class RsoFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_rso, container, false);
 
 
-        view.findViewById(R.id.gamedev).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Open the link here
-                openLink("https://dubnet.tacoma.uw.edu/login_only?redirect=https%3A%2F%2Fdubnet.tacoma.uw.edu%2Ffeeds%3Ftype%3Dclub%26type_id%3D35465%26tab%3Dhome"); // Replace with your actual link
-            }
-        });
 
-        view.findViewById(R.id.husky).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Open the link here
-                openLink("https://dubnet.tacoma.uw.edu/login_only?redirect=https%3A%2F%2Fdubnet.tacoma.uw.edu%2Ffeeds%3Ftype%3Dclub%26type_id%3D35465%26tab%3Dhome"); // Replace with your actual link
-            }
-        });
 
-        view.findViewById(R.id.engineer).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Open the link here
-                openLink("https://dubnet.tacoma.uw.edu/login_only?redirect=https%3A%2F%2Fdubnet.tacoma.uw.edu%2Ffeeds%3Ftype%3Dclub%26type_id%3D35465%26tab%3Dhome"); // Replace with your actual link
-            }
+        view.findViewById(R.id.gamedev).setOnClickListener(v -> {
+            String url = "https://dubnet.tacoma.uw.edu/login_only?redirect=https%3A%2F%2Fdubnet.tacoma.uw.edu%2Ffeeds%3Ftype%3Dclub%26type_id%3D35465%26tab%3Dhome";
+            Intent intent = new Intent(ACTION_VIEW, Uri.parse(url));
+            startActivity(intent);
+        });
+        view.findViewById(R.id.husky).setOnClickListener(v -> {
+            String url = "https://dubnet.tacoma.uw.edu/login_only?redirect=https%3A%2F%2Fdubnet.tacoma.uw.edu%2Ffeeds%3Ftype%3Dclub%26type_id%3D35465%26tab%3Dhome";
+            Intent intent = new Intent(ACTION_VIEW, Uri.parse(url));
+            startActivity(intent);
+        });
+        view.findViewById(R.id.engineer).setOnClickListener(v -> {
+            String url = "https://dubnet.tacoma.uw.edu/login_only?redirect=https%3A%2F%2Fdubnet.tacoma.uw.edu%2Ffeeds%3Ftype%3Dclub%26type_id%3D35465%26tab%3Dhome";
+            Intent intent = new Intent(ACTION_VIEW, Uri.parse(url));
+            startActivity(intent);
         });
 
 
