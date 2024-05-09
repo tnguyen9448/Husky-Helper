@@ -7,26 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".RsoActivity">
 
-    <Button
-        android:id="@+id/husky"
-        android:layout_width="93dp"
-        android:layout_height="39dp"
-        android:layout_marginEnd="113dp"
-        android:layout_marginBottom="73dp"
-        android:text="@string/joinGame"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/engineer"
-        android:layout_width="93dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="113dp"
-        android:text="@string/joinEngineer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="414dp"
@@ -38,21 +18,53 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@mipmap/hh_icon" />
+
+    <ImageView
+        android:id="@+id/hh_icon"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:contentDescription="@string/img_name"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/hh_icon" />
+
+    <Button
+        android:id="@+id/husky"
+        android:layout_width="93dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="113dp"
+        android:layout_marginBottom="73dp"
+        android:text="@string/joinGame"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/engineer"
+        android:layout_width="93dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="113dp"
+        android:text="@string/joinEngineer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <ImageView
 
-        android:id="@+id/imageView2"
+        android:id="@+id/engineerLogo"
         android:layout_width="83dp"
         android:layout_height="90dp"
+        android:contentDescription="ewobLogo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.555"
-        app:srcCompat="@drawable/engineerwoborder"
-        android:contentDescription="TODO" />
+        app:srcCompat="@drawable/engineerwoborder" />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageView"
@@ -68,9 +80,10 @@
         app:srcCompat="@drawable/huskycoding" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/gameDevLogo"
         android:layout_width="82dp"
         android:layout_height="89dp"
+        android:contentDescription="gameDevLogo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.082"
@@ -157,9 +170,9 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/gamedev"
+        android:id="@+id/gameDev"
         android:layout_width="93dp"
-        android:layout_height="39dp"
+        android:layout_height="48dp"
         android:layout_marginEnd="113dp"
         android:layout_marginBottom="65dp"
         android:text="@string/joinDev"
