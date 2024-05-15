@@ -2,11 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/bhsSR"
+    android:id="@+id/financesFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".BhsStudyFragment">
+    tools:context=".FinancesFragment">
 
 
     <androidx.appcompat.widget.Toolbar
@@ -35,55 +35,55 @@
         app:srcCompat="@mipmap/hh_icon" />
 
     <TextView
-        android:id="@+id/StudyRoom"
+        android:id="@+id/financesTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="112dp"
-        android:paddingTop="0dp"
-        android:text="@string/bhsStudyRoomTitle"
+        android:text="@string/financesLabel"
         android:textAlignment="center"
         android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.171" />
 
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="150dp"
-        android:layout_height="130dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="25dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/StudyRoom"
-        app:srcCompat="@drawable/bhs101" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="150dp"
-        android:layout_height="130dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/StudyRoom"
-        app:srcCompat="@drawable/bhs105" />
-
-    <TextView
-        android:id="@+id/namebhs101"
+    <Button
+        android:id="@+id/financialAidBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:text="@string/bhs101"
+        android:text="@string/financialAidLabel"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
 
-    <TextView
-        android:id="@+id/namebhs105"
+    <Button
+        android:id="@+id/tuitionBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="80dp"
-        android:text="@string/bhs105"
+        android:text="@string/tuitionLabel"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.399" />
+
+    <Button
+        android:id="@+id/cashierOfficeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cashierLabel"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.297" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

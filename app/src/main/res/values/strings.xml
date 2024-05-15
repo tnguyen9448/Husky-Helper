@@ -2,13 +2,14 @@
     <string name="app_name">Husky Helper</string>
     <string name="img_name">Husky Helper Icon</string>
 
+    <!-- MainActivity Text -->
     <string name="greetingHeader">Welcome!</string>
     <string name="academicLabel">Academics</string>
     <string name="studyLabel">Studying</string>
     <string name="abtLabel">About Us</string>
     <string name="clubLabel">Clubs &amp; RSOs</string>
 
-
+    <!-- RSOFragment Text -->
     <string name="husciiDevClub">HuSCII Developer Club</string>
     <string name="engineerClub">Engineers Without Borders</string>
     <string name="gameDevClub">Game Development Club</string>
@@ -25,6 +26,64 @@
     <string name="joinEngineer">Join</string>
     <string name="joinGame">Join</string>
     <string name="joinDev">Join</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- AboutActivity Text -->
+    <string name="about_title">About Husky Helper</string>
+    <string name="abt_txt1">Husky Helper is a mobile app developed in Android Studio for TCSS 450 in Spring quarter 2024.</string>
+    <string name="abt_txt2">This app is intended to provide a collection of resources for UW Tacoma first-year students, with information on academic resources, RSOs and Clubs, studying spaces, and parking locations on campus.</string>
+    <string name="abt_txt3">This app was made by Cecil Susi, Tammy Nguyen, and An Ha.</string>
+
+    <!-- AcademicsActivity Text -->
+    <string name="logo_alt_txt">Logo of App</string>
+    <string name="academicsTitle">Academic Resources</string>
+    <string name="classesLabel">Registration and Classes</string>
+    <string name="educationLabel">Enhancing Your Education</string>
+    <string name="financesLabel">Tuition and Finances</string>
+    <string name="registerClassesLabel">Registering for Classes</string>
+
+    <!-- ClassesFragment Text -->
+    <string name="catalogLabel">General Course Catalog</string>
+    <string name="timeScheduleLabel">Time Schedule</string>
+    <string name="searchTSLabel">Search Time Schedule</string>
+    <string name="advisingLabel">Academic Advising</string>
+
+    <!-- FinancesFragment Text -->
+    <string name="financialAidLabel">Financial Aid</string>
+    <string name="tuitionLabel">Tuition</string>
+    <string name="cashierLabel">Cashier\'s Office</string>
+
+    <!-- EnhanceEdFragment Text -->
+    <string name="publicationsLabel">Student Publications</string>
+    <string name="tlcLabel">Teaching and Learning Center</string>
+    <string name="techSupportLabel">Technology Support</string>
+    <string name="careerLabel">Career Development</string>
+    <string name="abroadLabel">Study Abroad</string>
+    <string name="awardsLabel">Fellowships and Awards</string>
+    <string name="bhsStudyRoomsLabel">BHS(2 Study rooms)</string>
+    <string name="studyRoomTitle">Study Room</string>
+    <string name="douStudyRoomLabel">Dougan(1 study room)</string>
+    <string name="joyStudyRoomLabel">JOY(1 study rooms)</string>
+    <string name="mlgStudyRoomLabel">MLG(6 study rooms)</string>
+    <string name="cpStudyRoomLabel">Cherry Park(6 study rooms)</string>
+    <string name="sciStudyRoomLabel">SCI(4 study rooms)</string>
+    <string name="bhsStudyRoomTitle">BHS Study Room</string>
+    <string name="bhs101">BHS 101</string>
+    <string name="bhs105">BHS 105</string>
+    <string name="mlgStudyRoomTitle">MLG Study Room</string>
+    <string name="mlg305">MLG 305</string>
+    <string name="mlg307">MLG 307</string>
+    <string name="mlg315">MLG 315</string>
+    <string name="mlg317">MLG 317</string>
+    <string name="mlg321">MLG 321</string>
+    <string name="mlg325">MLG 325</string>
+    <string name="joyStudyRoomTitle">JOY Study Room</string>
+    <string name="joy201">JOY 201</string>
+    <string name="douStudyRoomTitle">DOU Study Room</string>
+    <string name="dou174">DOU 174</string>
+    <string name="cpStudyRoomTitle">CP Study Room</string>
+    <string name="cp342B">CP 342B</string>
+    <string name="cp342A">CP 342A</string>
+    <string name="cp342C">CP 342C</string>
+    <string name="cp3A">CP 3A</string>
+    <string name="cp3B">CP 3B</string>
 </resources>
