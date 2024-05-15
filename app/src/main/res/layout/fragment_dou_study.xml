@@ -5,10 +5,9 @@
     android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".douStudy"
+    tools:context=".DouStudyFragment"
     android:background="@color/white">
 
-    <!-- TODO: Update blank fragment layout -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="414dp"
@@ -20,14 +19,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@mipmap/hh_icon" />
+
+    <ImageView
+        android:id="@+id/hh_icon"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:contentDescription="@string/img_name"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/hh_icon" />
 
     <TextView
         android:id="@+id/StudyRoom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="101dp"
-        android:text="DOU Study Room "
+        android:text="@string/douStudyRoomTitle"
         android:textAlignment="center"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,24 +57,13 @@
         app:srcCompat="@drawable/dou174" />
 
     <TextView
-        android:id="@+id/namedou174"
+        android:id="@+id/nameDou174"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
         android:layout_marginTop="2dp"
-        android:text="174"
+        android:text="@string/dou174"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <ImageView
-        android:id="@+id/imageView16"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="330dp"
-        android:src="@drawable/img"
-        app:layout_constraintEnd_toEndOf="@+id/toolbar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/toolbar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
