@@ -52,5 +52,10 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        findViewById(R.id.toDobutton).setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), ToDoActivity.class);
+            startActivity(intent);
+        });
+
     }
 }
