@@ -29,7 +29,10 @@ public class RsoFragment extends Fragment {
 
 
 
-
+        view.findViewById(R.id.hh_icon).setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), MainActivity.class);
+            startActivity(intent);
+        });
         view.findViewById(R.id.gamedev).setOnClickListener(v -> {
             String url = "https://dubnet.tacoma.uw.edu/login_only?redirect=https%3A%2F%2Fdubnet.tacoma.uw.edu%2Ffeeds%3Ftype%3Dclub%26type_id%3D35465%26tab%3Dhome";
             Intent intent = new Intent(ACTION_VIEW, Uri.parse(url));

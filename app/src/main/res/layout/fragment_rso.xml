@@ -11,7 +11,7 @@
     <Button
         android:id="@+id/husky"
         android:layout_width="93dp"
-        android:layout_height="39dp"
+        android:layout_height="48dp"
         android:layout_marginEnd="112dp"
         android:layout_marginBottom="96dp"
         android:text="@string/joinGame"
@@ -21,7 +21,7 @@
     <Button
         android:id="@+id/engineer"
         android:layout_width="93dp"
-        android:layout_height="39dp"
+        android:layout_height="48dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="113dp"
         android:text="@string/joinEngineer"
@@ -31,7 +31,7 @@
     <Button
         android:id="@+id/gamedev"
         android:layout_width="93dp"
-        android:layout_height="39dp"
+        android:layout_height="48dp"
         android:layout_marginEnd="112dp"
         android:layout_marginBottom="44dp"
         android:text="@string/joinDev"
@@ -107,7 +107,6 @@
         android:id="@+id/imageView2"
         android:layout_width="83dp"
         android:layout_height="90dp"
-        android:contentDescription="TODO"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.048"
@@ -151,10 +150,20 @@
         android:theme="?attr/actionBarTheme"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.003" />
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/hh_icon"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:contentDescription="@string/img_name"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/hh_icon" />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageView"
