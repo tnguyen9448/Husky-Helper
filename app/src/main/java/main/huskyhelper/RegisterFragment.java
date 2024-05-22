@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -74,6 +75,7 @@ public class RegisterFragment extends Fragment {
 
             } else {
                 Toast.makeText(this.getContext(),"User added", Toast.LENGTH_LONG).show();
+                Navigation.findNavController(getView()).popBackStack();
             }
 
         } else {

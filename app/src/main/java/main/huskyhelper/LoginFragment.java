@@ -1,6 +1,7 @@
 package main.huskyhelper;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
@@ -91,8 +92,12 @@ public class LoginFragment extends Fragment {
                         sharedPreferences.edit().putBoolean(getString(R.string.LOGGEDIN), true)
                                 .commit();
 
+                        Intent intent = new Intent(getActivity(), MainActivity.class);
+                        startActivity(intent);
+
                     } else {
-                        Toast.makeText(this.getContext(), "User failed to authenticate", Toast.LENGTH_LONG).show();
+                        Toast.makeText(this.getContext(), "Login failed! Please try again."
+                                , Toast.LENGTH_LONG).show();
 
                     }
                 } catch (JSONException e) {
