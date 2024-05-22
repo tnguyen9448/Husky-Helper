@@ -102,4 +102,7 @@
     <string name="LOGIN_PREFS">edu.tacoma.uw.csusi.huskyhelper.PREFS</string>
     <string name="LOGGEDIN">loggedin</string>
 
+    <!-- App Top Menu Text -->
+    <string name="action_logout">logout</string>
+
 </resources>
