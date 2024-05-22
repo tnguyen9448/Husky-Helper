@@ -58,12 +58,12 @@ public class LoginViewModel extends AndroidViewModel {
         }
     }
 
-    public void authenticateUser(String email, String pwd) {
+    public void authenticateUser(Account account) {
         String url = "http://students.washington.edu/csusi/login.php";
         JSONObject body = new JSONObject();
         try {
-            body.put("email", email);
-            body.put("password", pwd);
+            body.put("email", account.getEmail());
+            body.put("password", account.getPassword());
         } catch (JSONException e) {
             e.printStackTrace();
         }

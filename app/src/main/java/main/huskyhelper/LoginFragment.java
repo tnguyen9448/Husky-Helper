@@ -66,20 +66,32 @@ public class LoginFragment extends Fragment {
     public void login() {
         String email = String.valueOf(mBinding.emailEdit.getText());
         String pwd = String.valueOf(mBinding.pwdEdit.getText());
+        Account account;
+        try {
+            account = new Account (email, pwd);
+        } catch(IllegalArgumentException ie) {
+            Log.e(TAG, ie.getMessage());
+            Toast.makeText(getContext(), ie.getMessage(), Toast.LENGTH_LONG).show();
+            mBinding.errorLoginTextview.setText(ie.getMessage());
+            return;
+        }
         Log.i(TAG, email);
-        mLoginViewModel.authenticateUser(email, pwd);
+        mLoginViewModel.authenticateUser(account);
     }
 
     private void observeResponse(final JSONObject response) {
+        String err;
         if (response.length() > 0) {
             if (response.has("error")) {
                 try {
+                    err = "Error Authenticating User: " + response.get("error");
                     Toast.makeText(this.getContext(),
-                            "Error Authenticating User: " +
-                                    response.get("error"), Toast.LENGTH_LONG).show();
-
+                            err, Toast.LENGTH_LONG).show();
+                    mBinding.errorLoginTextview.setText("User failed to authenticate");
                 } catch (JSONException e) {
-                    Log.e("JSON Parse Error", e.getMessage());
+                    err = "JSON Parse Error" + e.getMessage();
+                    Log.e("JSON Parse Error", err);
+                    mBinding.errorLoginTextview.setText("User failed to authenticate");
                 }
 
             } else if (response.has("result")) {

@@ -57,20 +57,32 @@ public class RegisterFragment extends Fragment {
     public void register() {
         String email = String.valueOf(mBinding.emailEdit.getText());
         String pwd = String.valueOf(mBinding.pwdEdit.getText());
+        Account account;
+        try {
+            account = new Account(email, pwd);
+        } catch(IllegalArgumentException ie) {
+            Log.e(TAG, ie.getMessage());
+            Toast.makeText(getContext(), ie.getMessage(), Toast.LENGTH_LONG).show();
+            mBinding.textError.setText(ie.getMessage());
+            return;
+        }
         Log.i(TAG, email);
-        mRegisterViewModel.addUser(email, pwd);
+        mRegisterViewModel.addUser(account);
     }
 
     private void observeResponse(final JSONObject response) {
+        String err;
         if (response.length() > 0) {
             if (response.has("error")) {
                 try {
+                    err = "Error Adding User: " + response.get("error");
                     Toast.makeText(this.getContext(),
-                            "Error Adding User: " +
-                                    response.get("error"), Toast.LENGTH_LONG).show();
-
+                            err, Toast.LENGTH_LONG).show();
+                    mBinding.textError.setText(err);
                 } catch (JSONException e) {
-                    Log.e("JSON Parse Error", e.getMessage());
+                    err = "JSON Parse Error" + e.getMessage();
+                    Log.e(TAG, err);
+                    mBinding.textError.setText(err);
                 }
 
             } else {
