@@ -59,6 +59,8 @@
     <string name="careerLabel">Career Development</string>
     <string name="abroadLabel">Study Abroad</string>
     <string name="awardsLabel">Fellowships and Awards</string>
+
+    <!-- Study Room Fragments Text -->
     <string name="bhsStudyRoomsLabel">BHS(2 Study rooms)</string>
     <string name="studyRoomTitle">Study Room</string>
     <string name="douStudyRoomLabel">Dougan(1 study room)</string>
@@ -86,8 +88,7 @@
     <string name="cp342C">CP 342C</string>
     <string name="cp3A">CP 3A</string>
     <string name="cp3B">CP 3B</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="name">Enter your name here</string>
     <string name="email">Enter your email</string>
     <string name="clubName">Enter club name</string>
@@ -97,4 +98,21 @@
     <string name="add_club">Add club</string>
     <string name="join">Join</string>
     <string name="add_to_favorite">Add to favorite</string>
+
+    <!-- RegisterFragment Text -->
+    <string name="email_hint">Enter your email</string>
+    <string name="pwd_hint">Enter your password</string>
+    <string name="register_text">REGISTER</string>
+
+    <!-- LoginFragment Text -->
+    <string name="login_text">LOGIN</string>
+    <string name="register_navigate_text">Click here to Register!</string>
+
+    <!-- SharedPreferences Text -->
+    <string name="LOGIN_PREFS">edu.tacoma.uw.csusi.huskyhelper.PREFS</string>
+    <string name="LOGGEDIN">loggedin</string>
+
+    <!-- App Top Menu Text -->
+    <string name="action_logout">logout</string>
+
 </resources>
