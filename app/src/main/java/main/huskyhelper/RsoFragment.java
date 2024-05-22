@@ -7,15 +7,28 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class RsoFragment extends Fragment {
+public class RsoFragment extends Fragment implements MyAdapter.OnFooterButtonClickListener {
+    private RecyclerView recyclerView;
+    private MyAdapter clubAdapter;
+    private List<ClubItem> clubList;
+
+
 
 
 
@@ -26,35 +39,77 @@ public class RsoFragment extends Fragment {
 
 
         View view = inflater.inflate(R.layout.fragment_rso, container, false);
-
-
-
-
-        view.findViewById(R.id.gamedev).setOnClickListener(v -> {
-            String url = "https://dubnet.tacoma.uw.edu/login_only?redirect=https%3A%2F%2Fdubnet.tacoma.uw.edu%2Ffeeds%3Ftype%3Dclub%26type_id%3D35465%26tab%3Dhome";
-            Intent intent = new Intent(ACTION_VIEW, Uri.parse(url));
-            startActivity(intent);
-        });
-        view.findViewById(R.id.husky).setOnClickListener(v -> {
-            String url = "https://dubnet.tacoma.uw.edu/login_only?redirect=https%3A%2F%2Fdubnet.tacoma.uw.edu%2Ffeeds%3Ftype%3Dclub%26type_id%3D35465%26tab%3Dhome";
-            Intent intent = new Intent(ACTION_VIEW, Uri.parse(url));
-            startActivity(intent);
-        });
-        view.findViewById(R.id.engineer).setOnClickListener(v -> {
-            String url = "https://dubnet.tacoma.uw.edu/login_only?redirect=https%3A%2F%2Fdubnet.tacoma.uw.edu%2Ffeeds%3Ftype%3Dclub%26type_id%3D35465%26tab%3Dhome";
-            Intent intent = new Intent(ACTION_VIEW, Uri.parse(url));
-            startActivity(intent);
-        });
-
-
+        recyclerView = view.findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        clubList = getClubs();
+        clubAdapter = new MyAdapter(requireContext(), clubList, this);
+        recyclerView.setAdapter(clubAdapter);
 
         return view;
+
+
+
+
+
+
+
+
     }
 
-    private void openLink(String url) {
+    private List<ClubItem> getClubs() {
+        // Sample data for demonstration purposes
+        List<ClubItem> clubs = new ArrayList<>();
+        clubs.add(new ClubItem("Game Development", "A club for aspiring game developers.", R.drawable.gamedev));
+        clubs.add(new ClubItem("Engineer Without Borders", "A club focused on engineering projects that help communities.", R.drawable.engineerwoborder));
+        clubs.add(new ClubItem("HuSCII Developer", "A club for students interested in coding and software development.", R.drawable.huskycoding));
+        clubs.add(new ClubItem("Registered Student Organization", "A club representing various student interests and activities.", R.drawable.rso));
+        clubs.add(new ClubItem("Finance Association", "A club for students interested in finance and investment.", R.drawable.finance));
+        clubs.add(new ClubItem("Husky Soccer", "A club for soccer enthusiasts and players.", R.drawable.soccer));
+        clubs.add(new ClubItem("Programming Project", "A club for collaborative programming and coding projects.", R.drawable.programming));
+        clubs.add(new ClubItem("UWT Smash Club", "A club for fans and players of Super Smash Bros.", R.drawable.smash));
+        clubs.add(new ClubItem("Women in Computing Science", "A club supporting women in the field of computing science.", R.drawable.womenincomp));
+        clubs.add(new ClubItem("Volleyball Club", "A club for volleyball players and enthusiasts.", R.drawable.volleyball));
+        clubs.add(new ClubItem("Psychology Club", "A club for students interested in psychology.", R.drawable.psychology));
+
+
+
+
+
+        // Add more clubs as needed
+
+        return clubs;
+    }
+
+
+    public void onFooterButton1Click() {
+        //Toast.makeText(getContext(), "Footer Button 1 Clicked", Toast.LENGTH_SHORT).show();
+        String url = "https://dubnet.tacoma.uw.edu/login_only?redirect=https%3a%2f%2fdubnet.tacoma.uw.edu%2ffeeds%3ftype%3dclub%26type_id%3d35465%26tab%3dhome";
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse(url));
         startActivity(intent);
+        // Add your logic here to handle the button click
     }
+
+
+    public void onFooterButton2Click() {
+        //Toast.makeText(getContext(), "Footer Button 2 Clicked", Toast.LENGTH_SHORT).show();
+        // Add your logic here to handle the button click
+
+        AddClubFragment clubFragment = new AddClubFragment();
+
+        // Get the FragmentManager and start a transaction
+        FragmentManager fragmentManager = getParentFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        // Replace the current fragment with the new fragment
+        fragmentTransaction.replace(R.id.rsoFragment, clubFragment);
+
+        // Optionally add the transaction to the back stack so the user can navigate back
+        fragmentTransaction.addToBackStack(null);
+
+        // Commit the transaction
+        fragmentTransaction.commit();
+    }
+
 
 }
