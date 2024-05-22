@@ -86,4 +86,15 @@
     <string name="cp342C">CP 342C</string>
     <string name="cp3A">CP 3A</string>
     <string name="cp3B">CP 3B</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name">Enter your name here</string>
+    <string name="email">Enter your email</string>
+    <string name="clubName">Enter club name</string>
+    <string name="addMember">Sign up</string>
+    <string name="enter_name">Enter name</string>
+    <string name="enter_club">Enter club</string>
+    <string name="add_club">Add club</string>
+    <string name="join">Join</string>
+    <string name="add_to_favorite">Add to favorite</string>
 </resources>
