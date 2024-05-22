@@ -21,44 +21,49 @@ public class EnhanceEdFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View edView = inflater.inflate(R.layout.fragment_enhance_ed, container, false);
+        View view = inflater.inflate(R.layout.fragment_enhance_ed, container, false);
 
-        edView.findViewById(R.id.careerBtn).setOnClickListener(v -> {
+        view.findViewById(R.id.hh_icon).setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), MainActivity.class);
+            startActivity(intent);
+        });
+        
+        view.findViewById(R.id.careerBtn).setOnClickListener(v -> {
             String url = "https://www.tacoma.uw.edu/career";
             Intent intent = new Intent(ACTION_VIEW, Uri.parse(url));
             startActivity(intent);
         });
 
-        edView.findViewById(R.id.awardsBtn).setOnClickListener(v -> {
+        view.findViewById(R.id.awardsBtn).setOnClickListener(v -> {
             String url = "https://www.tacoma.uw.edu/oga/sf";
             Intent intent = new Intent(ACTION_VIEW, Uri.parse(url));
             startActivity(intent);
         });
 
-        edView.findViewById(R.id.publicationsBtn).setOnClickListener(v -> {
+        view.findViewById(R.id.publicationsBtn).setOnClickListener(v -> {
             String url = "https://www.tacoma.uw.edu/involvement/publications";
             Intent intent = new Intent(ACTION_VIEW, Uri.parse(url));
             startActivity(intent);
         });
 
-        edView.findViewById(R.id.abroadBtn).setOnClickListener(v -> {
+        view.findViewById(R.id.abroadBtn).setOnClickListener(v -> {
             String url = "https://www.tacoma.uw.edu/oga/sa";
             Intent intent = new Intent(ACTION_VIEW, Uri.parse(url));
             startActivity(intent);
         });
 
-        edView.findViewById(R.id.tlcBtn).setOnClickListener(v -> {
+        view.findViewById(R.id.tlcBtn).setOnClickListener(v -> {
             String url = "https://www.tacoma.uw.edu/tlc";
             Intent intent = new Intent(ACTION_VIEW, Uri.parse(url));
             startActivity(intent);
         });
 
-        edView.findViewById(R.id.techSupportBtn).setOnClickListener(v -> {
+        view.findViewById(R.id.techSupportBtn).setOnClickListener(v -> {
             String url = "https://www.tacoma.uw.edu/it";
             Intent intent = new Intent(ACTION_VIEW, Uri.parse(url));
             startActivity(intent);
         });
 
-        return edView;
+        return view;
     }
 }
