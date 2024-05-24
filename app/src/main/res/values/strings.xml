@@ -113,5 +113,13 @@
 
     <!-- App Top Menu Text -->
     <string name="action_logout">logout</string>
+    <string name="toDoBtn">To Do List</string>
+    <string name="contactLabel">Contact Us!</string>
+    <string name="contact_context">Have questions, suggestions, or other feedback for improving Husky Helper? Fill out the contact form below to get in contact with our team!</string>
+    <string name="backBtnLabel">Go Back</string>
+    <string name="feedbackHint">Enter your feedback</string>
+    <string name="subjectHint">Enter a subject line</string>
+    <string name="sendBtnLabel">Send Email</string>
+    <string name="contactTitle">Contact Us</string>
 
 </resources>

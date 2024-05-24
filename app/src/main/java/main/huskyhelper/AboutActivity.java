@@ -26,5 +26,12 @@ public class AboutActivity extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(intent);
         });
+
+        findViewById(R.id.contactBtn).setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), ContactActivity.class);
+            startActivity(intent);
+        });
+
+
     }
 }

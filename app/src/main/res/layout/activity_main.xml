@@ -71,7 +71,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.635" />
+        app:layout_constraintVertical_bias="0.737" />
 
     <Button
         android:id="@+id/clubBtn"
@@ -87,15 +87,26 @@
 
     <Button
         android:id="@+id/toDobutton"
-        android:layout_width="150dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="30dp"
-        android:text="To Do List"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/toDoBtn"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.631" />
+
+    <ImageView
+        android:id="@+id/pawGraphic"
+        android:layout_width="138dp"
+        android:layout_height="112dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/abtBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/abtBtn"
+        app:srcCompat="@mipmap/paws"
+        tools:ignore="ContentDescription,MissingConstraints" />
 
-=========
->>>>>>>>> Temporary merge branch 2
 </androidx.constraintlayout.widget.ConstraintLayout>
