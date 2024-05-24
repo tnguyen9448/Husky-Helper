@@ -95,6 +95,7 @@
     <string name="enter_name">Enter name</string>
     <string name="enter_club">Enter club</string>
     <string name="add_club">Add club</string>
+    <string name="other">Other\'s interested </string>
+    <string name="add_to_favorite">Add to interested</string>
     <string name="join">Join</string>
-    <string name="add_to_favorite">Add to favorite</string>
 </resources>

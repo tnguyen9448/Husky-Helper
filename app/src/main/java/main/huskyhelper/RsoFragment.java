@@ -82,18 +82,30 @@ public class RsoFragment extends Fragment implements MyAdapter.OnFooterButtonCli
 
 
     public void onFooterButton1Click() {
+
+        ClubDisplayFragment clubListFragment = new ClubDisplayFragment();
+
+        FragmentManager fragmentManager = getParentFragmentManager();
+
+        // Replace the current fragment with ClubListFragment
+        fragmentManager.beginTransaction()
+                .setReorderingAllowed(true)
+                .replace(R.id.rsoFragment, clubListFragment, null)
+                .addToBackStack(null) // This will add the transaction to the back stack
+                .commit();
+
+
         //Toast.makeText(getContext(), "Footer Button 1 Clicked", Toast.LENGTH_SHORT).show();
+        /*
         String url = "https://dubnet.tacoma.uw.edu/login_only?redirect=https%3a%2f%2fdubnet.tacoma.uw.edu%2ffeeds%3ftype%3dclub%26type_id%3d35465%26tab%3dhome";
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse(url));
         startActivity(intent);
-        // Add your logic here to handle the button click
+       */
     }
 
 
     public void onFooterButton2Click() {
-        //Toast.makeText(getContext(), "Footer Button 2 Clicked", Toast.LENGTH_SHORT).show();
-        // Add your logic here to handle the button click
 
         AddClubFragment clubFragment = new AddClubFragment();
 
@@ -111,5 +123,12 @@ public class RsoFragment extends Fragment implements MyAdapter.OnFooterButtonCli
         fragmentTransaction.commit();
     }
 
+    @Override
+    public void onFooterButton3Click() {
+        String url = "https://dubnet.tacoma.uw.edu/login_only?redirect=https%3a%2f%2fdubnet.tacoma.uw.edu%2ffeeds%3ftype%3dclub%26type_id%3d35465%26tab%3dhome";
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(url));
+        startActivity(intent);
 
+    }
 }

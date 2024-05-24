@@ -60,6 +60,7 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             FooterViewHolder footerHolder = (FooterViewHolder) holder;
             footerHolder.button1.setOnClickListener(v -> footerButtonClickListener.onFooterButton1Click());
             footerHolder.button2.setOnClickListener(v -> footerButtonClickListener.onFooterButton2Click());
+            footerHolder.button3.setOnClickListener(v -> footerButtonClickListener.onFooterButton3Click());
         }
     }
 
@@ -71,6 +72,7 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public interface OnFooterButtonClickListener {
         void onFooterButton1Click();
         void onFooterButton2Click();
+        void onFooterButton3Click();
     }
 
     static class FooterViewHolder extends RecyclerView.ViewHolder {
@@ -78,10 +80,13 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         Button button1;
         Button button2;
 
+        Button button3;
+
         public FooterViewHolder(@NonNull View itemView) {
             super(itemView);
-            button1 = itemView.findViewById(R.id.join_button);
+            button1 = itemView.findViewById(R.id.intertested_button);
             button2 = itemView.findViewById(R.id.addList);
+            button3 = itemView.findViewById(R.id.join_button);
         }
     }
 }

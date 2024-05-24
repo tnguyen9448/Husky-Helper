@@ -15,18 +15,25 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class ClubViewModel extends AndroidViewModel {
     private MutableLiveData<JSONObject> mResponse;
+    private MutableLiveData<List<Club>> mClubList;
+
     public ClubViewModel(@NonNull Application application) {
         super(application);
         mResponse = new MutableLiveData<>();
         mResponse.setValue(new JSONObject());
+        mClubList = new MutableLiveData<>();
+        mClubList.setValue(new ArrayList<>());
     }
 
     public void addResponseObserver(@NonNull LifecycleOwner owner,
@@ -57,15 +64,12 @@ public class ClubViewModel extends AndroidViewModel {
         }
     }
 
-
-    public void addClub(String name, String club) {
+    public void addClub(String name, String description) {
         String url = "https://students.washington.edu/aha25/add_club.php";
         JSONObject body = new JSONObject();
         try {
-
-
             body.put("name", name);
-            body.put("club", club);
+            body.put("description", description);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -73,7 +77,7 @@ public class ClubViewModel extends AndroidViewModel {
         Request request = new JsonObjectRequest(
                 Request.Method.POST,
                 url,
-                body, //no body for this get request
+                body,
                 mResponse::setValue,
                 this::handleError);
 
@@ -82,10 +86,51 @@ public class ClubViewModel extends AndroidViewModel {
                 10_000,
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-        //Instantiate the RequestQueue and add the request to the queue
+
         Volley.newRequestQueue(getApplication().getApplicationContext())
                 .add(request);
     }
 
+    public void addClubListObserver(@NonNull LifecycleOwner owner,
+                                    @NonNull Observer<? super List<Club>> observer) {
+        mClubList.observe(owner, observer);
+    }
 
+    private void handleResult(final JSONObject result) {
+        Log.d("ClubViewModel", "Response from server: " + result.toString());
+        try {
+            String data = result.getString("favoriteClubs");
+            JSONArray arr = new JSONArray(data);
+            List<Club> clubList = new ArrayList<>();
+            for (int i = 0; i < arr.length(); i++) {
+                JSONObject obj = arr.getJSONObject(i);
+                Club club = new Club(
+                        obj.getString("name"),
+                        obj.getString("clubname"));
+                clubList.add(club);
+            }
+            mClubList.postValue(clubList);
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Log.e("ERROR!", e.getMessage());
+        }
+    }
+
+    public void getClubs() {
+        String url = "https://students.washington.edu/aha25/get_club.php";
+        Request request = new JsonObjectRequest(
+                Request.Method.GET,
+                url,
+                null,
+                this::handleResult,
+                this::handleError);
+
+        request.setRetryPolicy(new DefaultRetryPolicy(
+                10_000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
+        Volley.newRequestQueue(getApplication().getApplicationContext()).add(request);
+    }
 }
+
